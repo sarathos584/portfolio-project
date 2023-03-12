@@ -1,0 +1,21 @@
+:root{
+  --font-color: #f2f2f2;
+  --font-color2: #b4b1b1;
+  --bg-color  : #222222;
+  --main-color: #800080;
+  --project-bg: #3d3d3d;
+  --nav-font-size: 18px;
+  --font-size1: 3rem;
+  --font-size2: 1.5rem;
+  --font-size3:1.1rem;
+  --font-size4:1rem;
+}
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+    background: var(--bg-color);
+    
+   
+  }

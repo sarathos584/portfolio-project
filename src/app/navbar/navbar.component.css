@@ -1,0 +1,211 @@
+
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: #f2f2f2;
+} */
+
+  nav{
+      color: var(--font-color);
+      font-family: 'Tilt Neon', sans-serif;
+      background: var(--bg-color);
+      padding: 10px 40px 10px 70px;
+  }
+  nav ul {
+      display: flex;
+      list-style: none;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+  }
+  nav ul li.logo {
+      flex: 1;
+      font-size: 25px;
+      font-weight: 700;
+  }
+  nav ul div.items{
+      padding: 0 25px;
+      display: inline-flex;
+      gap: 3rem;
+      justify-content: space-around;
+     
+      
+  }
+  nav ul div.items a {
+      text-decoration: none;
+      font-size: var(--nav-font-size);
+      padding: 0 12px;
+      color: var(--font-color);
+      
+  }
+  nav ul div.items a:hover{
+      
+      text-decoration: none;
+      border-radius: 3px;
+      display: inline-block;
+      background: var(--main-color);
+      text-decoration: none;
+      box-shadow: inset 5px 5px 8px var(--main-color),
+      inset -5px -5px 8px #d835d8;
+  
+  }
+  
+  
+  
+  
+  /*===================*/
+  /* BOB
+  /*===================*/
+  
+  @-webkit-keyframes bob-on-hover {
+    0% {
+      -webkit-transform: translateY(-8px);
+      transform: translateY(-8px);
+    }
+    50% {
+      -webkit-transform: translateY(-4px);
+      transform: translateY(-4px);
+    }
+    100% {
+      -webkit-transform: translateY(-8px);
+      transform: translateY(-8px);
+    }
+  }
+  @keyframes bob-on-hover {
+    0% {
+      -webkit-transform: translateY(-8px);
+      transform: translateY(-8px);
+    }
+    50% {
+      -webkit-transform: translateY(-4px);
+      transform: translateY(-4px);
+    }
+    100% {
+      -webkit-transform: translateY(-8px);
+      transform: translateY(-8px);
+    }
+  }
+  @-webkit-keyframes bob-on-hover-float {
+    100% {
+      -webkit-transform: translateY(-8px);
+      transform: translateY(-8px);
+    }
+  }
+  @keyframes bob-on-hover-float {
+    100% {
+      -webkit-transform: translateY(-8px);
+      transform: translateY(-8px);
+    }
+  }
+  .bob-on-hover {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  }
+  .bob-on-hover:hover, .bob-on-hover:focus, .bob-on-hover:active {
+    -webkit-animation-name: bob-on-hover-float, bob-on-hover;
+    animation-name: bob-on-hover-float, bob-on-hover;
+    -webkit-animation-duration: .3s, 1.5s;
+    animation-duration: .3s, 1.5s;
+    -webkit-animation-delay: 0s, .3s;
+    animation-delay: 0s, .3s;
+    -webkit-animation-timing-function: ease-out, ease-in-out;
+    animation-timing-function: ease-out, ease-in-out;
+    -webkit-animation-iteration-count: 1, infinite;
+    animation-iteration-count: 1, infinite;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-direction: normal, alternate;
+    animation-direction: normal, alternate;
+  }
+  
+  nav ul .btn {
+    font-size: 29px;
+    flex: 1;
+    padding: 0px 40px;
+    display: none;
+  }
+  nav ul .btn span{
+      height: 42px;
+      width: 42px;
+      text-align: center;
+      line-height: 42px;
+      border: 1px solid #151515;
+      border-radius: 5px;
+  }
+  nav ul .btn span i.show::before{
+      content: '\f00d';
+      cursor: pointer;
+  
+  }
+  @media screen and (max-width:822px){
+      nav{
+          padding: 10px 40px 10px 40px;
+      }
+      nav ul li.logo{
+          display: none;
+      }
+      nav ul div.items{
+          justify-content: space-between;
+      }
+  }
+  
+  @media screen and (max-width:714px){
+      nav ul .btn{
+          display: inline-flex;
+          justify-content: flex-end;
+          padding-right: 0;
+      }
+      nav{
+          z-index: 1;
+          padding: 9px 40px 9px 40px;
+      }
+      nav ul div.items{
+          z-index: -1;
+          position: fixed;
+          top: -520px;
+          right: 0;
+          width: 100%;
+          background: #222222;
+          display: inline-block;
+          transition: top .5s;
+      }
+      nav ul div.items.show{
+          top: 60px;
+      }
+      nav ul div.items li{
+          text-align: center;
+          line-height: 30px;
+          margin: 30px 0;
+      }
+      nav ul div.items li a{
+          font-size: 19px;
+      }
+      nav ul li.logo{
+          display: inline-flex;
+          font-size: 20px;
+      }
+  }
+  @media screen and (max-width:414px){
+    nav{
+        padding: 0;
+    }
+    
+  }
+  @media screen and (max-width:333px){
+    nav{
+        padding: 0;
+    }
+    nav ul li.logo{
+        display: inline;
+    }  
+    nav ul{
+        padding: 0;
+    }
+    
+  }
+  

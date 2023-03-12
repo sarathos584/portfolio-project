@@ -1,0 +1,21 @@
+<nav>
+    <ul>
+        <li class="logo">&lt;RAMBLER&sol;&gt;</li>
+        <li class="btn"><span><i class="fa-solid fa-bars collapse"></i></span></li>
+        <div class="items" id="nav-list">
+            <li><a routerLink="" class="bob-on-hover">Home</a></li>
+            <li><a routerLink="skills" class="bob-on-hover">Skills</a></li>
+            <li><a routerLink="projects" class="bob-on-hover">Projects</a></li>
+            <li><a routerLink="education" class="bob-on-hover">Education</a></li>
+            <li><a routerLink="resume" class="bob-on-hover">Resume</a></li>
+            <li><a routerLink="contact" class="bob-on-hover">Contact</a></li>
+        </div>
+    </ul>
+</nav>
+
+<script>
+    $('nav ul .btn span').click(function(){
+        $('nav ul div.items').toggleClass("show");
+        $('nav ul .btn span i').toggleClass("show");
+    });
+</script>

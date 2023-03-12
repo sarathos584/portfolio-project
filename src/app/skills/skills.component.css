@@ -1,0 +1,116 @@
+.skills .contents .skill-set .skill-icons img{
+    width: 42px;
+    height: 48px;
+}
+.skills .contents .skill-set .skill-icons img:hover{
+    -webkit-box-shadow: -1px 0px 12px 1px rgba(255,255,255,1);
+-moz-box-shadow: -1px 0px 12px 1px rgba(255,255,255,1);
+box-shadow: -1px 0px 12px 1px rgba(255,255,255,1);
+}
+.skills .contents .image img {
+    max-width: 40em;
+    height: auto;
+    margin: .5em;
+}
+.skills{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.skills .contents{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* gap: 3em; */
+    
+}
+.skills  .head h3{
+    color: var(--font-color);
+    font-size: var(--font-size1);
+}
+.skills .contents .skill-set{
+    display: flex;
+   flex-wrap: wrap;
+}
+.skills .contents .skill-set .skill-icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    margin: 0 auto;
+
+}
+.skills .contents .skill-set .skill-head{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: var(--font-size2);
+      color: var(--font-color);
+      font-weight: 400;
+      text-align: center;
+
+      margin: 12px auto ;
+}
+.skills .contents .skill-set .skill-icons .icon-set1,
+    .skills .contents .skill-set .skill-icons .icon-set2{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: .8em;
+    }
+.skills .detail p{
+    font-size: var(--font-size3);
+    color: var(--font-color2);
+    line-height: 1.5em;
+}
+.skills .detail p i {
+    color: #ffff00;
+    margin-right: .5em;
+}
+.skills .detail p .stack{
+    color: var(--main-color);
+}
+#mongoDB{
+    color: #4DB33D;
+}
+
+
+/* Media query for responsiveness */
+@media screen and (max-width: 1214px) {
+    .skills .contents {
+        flex-direction: column;
+    }
+}
+@media screen and(max-width:957px) {
+    .skills .contents .skill-set{
+        flex-direction: column;
+        justify-content: center;
+    }
+   
+}
+@media screen and (max-width: 647px){
+    .skills .contents .image img{
+        width: 95vw;
+    }
+}
+@media screen and (max-width: 573px){
+    .skills .contents .skill-set .skill-icons{
+        flex-grow: inherit;
+        width: 100vw;
+    }
+}
+@media screen and (max-width:549px) {
+    .skills .contents .skill-set .skill-icons{
+        flex-direction: column;
+    }
+    .skills .contents .skill-set .skill-icons .icon-set1,
+    .skills .contents .skill-set .skill-icons .icon-set2{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 95vw;
+       
+        
+    }
+}

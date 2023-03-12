@@ -1,0 +1,97 @@
+.home{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 3rem;
+    padding: 0;
+    margin: 8em;
+}
+.home .content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+   
+}
+ 
+ .home .content #greeting{
+    color: var(--font-color);
+    font-weight: 700;
+    font-size: var(--font-size1);
+    font-family: 'Poppins',sans-serif;
+    
+   
+}
+.home .content p{
+    color: var(--font-color2);
+    font-size: var(--font-size3);
+    text-align: center;
+}
+.home .content p span{
+    color: var(--main-color);
+}
+.home .content button{
+    color: var(--font-color);
+    background-color: var(--main-color);
+    border: none;
+    border-radius: .2em;
+    outline: none;
+    font-size: var(--font-size2);
+    margin-top: 1em;
+    cursor: pointer;
+}
+.home .content button a{
+    text-decoration: none;
+    color: var(--font-color);
+}
+.home .content button:hover{
+    -webkit-box-shadow: -1px 1px 7px 1px rgba(222,22,222,1);
+-moz-box-shadow: -1px 1px 7px 1px rgba(222,22,222,1);
+box-shadow: -1px 1px 7px 1px rgba(222,22,222,1);
+}
+.home .content .social{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+.home .content .social .media-icon{
+    text-decoration: none;
+    color: white;
+    font-size: 1.5em;
+    border-radius: 100%; 
+    display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.home .content .social .media-icon:hover{
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+}
+.home .image svg{
+   width: 300px;
+    height: auto;
+}
+@media screen and (max-width:575px) {
+    .home{
+        flex-direction: column;
+    }
+    .home .image svg{
+        padding-top: 0;
+    }
+    .home .content #greeting{
+        font-size: 2rem;
+        margin-bottom: 0;
+    }
+}
+@media screen and (max-width:305px){
+    .home .image svg{
+        width: 100vw;
+    }
+}
